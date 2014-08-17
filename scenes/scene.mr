@@ -1,0 +1,59 @@
+scene sss
+ spp 1
+ depth 1
+
+kd yes
+depth 20
+min 10
+
+cam pin 1
+ c 0 -5 2
+ t 0 0 1
+ up 0 0 1
+ fov 50
+ wh 640 480
+
+light pnt
+ pos 4 3 1
+ flux 300 300 300
+
+shader lamb 0
+ refl 0.9 0.9 0.9
+
+shader sss 1
+ refl 1 0 0
+ incolor 0 1 0
+ index 1
+ rindex 1.6
+
+shader lamb 2
+ refl 0 0 0.9
+
+shader lamb 3
+ refl 0.9 0.9 0.9
+
+obj tri 2
+ v1 -10 -10 0
+ v2 10 -10 0
+ v3 10 10 0
+ n1 0 0 1
+ n2 0 0 1
+ n3 0 0 1
+ uv1 1 0 0
+ uv2 1 1 0
+ uv3 0 1 0
+
+obj tri 2
+ v1 10 10 0
+ v2 -10 10 0
+ v3 -10 -10 0
+ n1 0 0 1
+ n2 0 0 1
+ n3 0 0 1
+ uv1 1 0 0
+ uv2 1 1 0
+ uv3 0 1 0
+
+obj sphere 1
+ center 0 0 1
+ radius 1
